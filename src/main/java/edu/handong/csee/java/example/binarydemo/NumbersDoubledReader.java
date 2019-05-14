@@ -9,6 +9,14 @@ import java.io.ObjectInputStream;
 public class NumbersDoubledReader {
 	String fileName = "numbersDoubled.dat";
 	
+	public static void main(String[] args) {
+		NumbersDoubledReader demonstrator = new NumbersDoubledReader();
+		demonstrator.run();
+	}
+	
+	private void run() {
+		String fileName = "numbers.dat";
+		
 	try {
 		ObjectInputStream inputStream = new ObjectInputStream(
 							new FileInputStream(fileName));
