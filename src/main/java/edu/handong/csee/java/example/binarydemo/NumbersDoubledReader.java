@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 
 public class NumbersDoubledReader {
-	String fileName = "numbersDoubled.dat";
+	//String fileName = "numbersDoubled.dat";
 	
 	public static void main(String[] args) {
 		NumbersDoubledReader demonstrator = new NumbersDoubledReader();
@@ -15,7 +15,7 @@ public class NumbersDoubledReader {
 	}
 	
 	private void run() {
-		String fileName = "numbers.dat";
+		String fileName = "numbersDoubled.dat";
 		
 	try {
 		ObjectInputStream inputStream = new ObjectInputStream(
@@ -23,12 +23,12 @@ public class NumbersDoubledReader {
 		System.out.println("in the file " + fileName);
 		while(true) {
 			int anInteger = inputStream.readInt();
-			System.out.println(anInteger);
+			System.out.print(anInteger+ " ");
 		}
 	} catch(FileNotFoundException e) {
 		System.out.println("Problem opening the file " + fileName);
 	} catch (EOFException e) {
-		System.out.println("Reached end of the file.");
+		System.out.println("\nReached end of the file.");
 	} catch (IOException e) {
 		System.out.println("Problem reading the file " + fileName);
 	}
